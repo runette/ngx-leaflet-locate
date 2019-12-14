@@ -120,7 +120,7 @@ Add the following to the angular.json
 ```
 "styles": [
               ...
-              "./node_modules/leaflet-loading/src/Control.Loading.css",
+              "./node_modules/leaflet.locatecontrol/dist/L.Control.Locate.css",
             ],
 ```
 
