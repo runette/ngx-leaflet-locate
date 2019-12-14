@@ -1,0 +1,10 @@
+{
+  "$schema": "../../node_modules/ng-packagr/ng-package.schema.json",
+  "dest": "../../dist/ngx-leaflet-locate",
+  "lib": {
+    "entryFile": "src/projects.ts"
+  },
+  "whitelistedNonPeerDependencies": [
+    "leaflet.locatecontrol"
+  ]
+}

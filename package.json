@@ -1,0 +1,15 @@
+{
+  "name": "@runette/ngx-leaflet-locate",
+  "description":"Angular Wrapper for the Leaflet Location Control",
+  "keywords": ["angular", "leaflet", "control", "locate"],
+  "homepage": "https://github.com/runette/ngx-leaflet-fullscreen",
+  "licence": "MIT",
+  "version": "0.0.1",
+  "peerDependencies": {
+    "@angular/common": "^8.2.14",
+    "@angular/core": "^8.2.14"
+  },
+  "dependencies": {
+    "leaflet.locatecontrol": "^0.68.0"
+  }
+}
