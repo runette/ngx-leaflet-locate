@@ -1,14 +1,11 @@
+/// <reference types="leaflet.locatecontrol" />
 import { Component, OnInit, OnDestroy, Input, Output, EventEmitter} from '@angular/core';
-import {Map, control, Control, latLng } from 'leaflet';
+import {Map ,control, Control, latLng } from 'leaflet';
 import * as L from 'leaflet';
 import {Location} from './Location';
 import '../../../../node_modules/leaflet.locatecontrol/dist/L.Control.Locate.min.js';
 
-declare module 'leaflet' {
-  namespace control {
-      function locate(v: any): Control;
-    }
-}
+
 
 @Component({
   selector: 'leaflet-locate-control',
