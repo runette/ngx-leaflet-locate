@@ -4,4 +4,4 @@
 
 export * from './lib/ngx-leaflet-locate.component';
 export * from './lib/ngx-leaflet-locate.module';
-export * from './lib/Location';
+

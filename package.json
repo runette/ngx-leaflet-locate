@@ -1,17 +1,18 @@
 {
   "name": "@runette/ngx-leaflet-locate",
+  "version": "2.0.0",
   "description": "Angular Wrapper for the Leaflet Location Control",
   "keywords": [
     "angular",
     "leaflet",
     "control",
     "locate",
-    "locatecontrol"
+    "locatecontrol",
+    "leaflet.locatecontrol"
   ],
   "homepage": "https://github.com/runette/ngx-leaflet-locate",
   "bugs": "https://github.com/runette/ngx-leaflet-locate/issues",
   "licence": "MIT",
-  "version": "1.0.1",
   "peerDependencies": {
     "@angular/common": "^8.2.14",
     "@angular/core": "^8.2.14"
