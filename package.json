@@ -20,5 +20,8 @@
   "dependencies": {
     "@types/leaflet.locatecontrol": "^0.60.8",
     "leaflet.locatecontrol": "^0.76.1"
+  },
+  "scripts": {
+    "build:prod": "ng build ngx-leaflet-locate"
   }
 }

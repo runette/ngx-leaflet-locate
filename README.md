@@ -22,6 +22,8 @@ Install using npm:
 npm install @runette/ngx-leaflet-locate
 ```
 
+Note that from version 1.0.4, this library is built using a partial Ivy compilation and should work with any version of Angular.io after version 12.0.0
+
 # Usage
 
 This library needs to be imported into the application module:
@@ -66,12 +68,13 @@ by adding the following to your map component (note - the locateOptions are only
 
 ```
 ...
-import { Map } from 'leaflet';
+/// <reference types="leaflet.locatecontrol" />
+import { latLng, Map, Control, LocationEvent } from 'leaflet';
 
 
 export class OsmMapComponent implements OnInit, OnDestroy {
   public map: Map;
-  public locateOptions = {
+  public locateOptions:  Control.LocateOptions = {
     flyTo: false,
     keepCurrentZoomLevel: true,
     locateOptions: {
@@ -89,7 +92,7 @@ export class OsmMapComponent implements OnInit, OnDestroy {
     this.map = map;
   }
   
-  onNewLocation(e: Location){
+  onNewLocation(e: LocationEvent){
   ...some actions;
 }
 ```

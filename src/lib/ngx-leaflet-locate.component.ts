@@ -1,6 +1,6 @@
 /// <reference path="../../node_modules/@types/leaflet.locatecontrol/index.d.ts" />
 import { Component, OnInit, OnDestroy, Input, Output, EventEmitter} from '@angular/core';
-import {Map, control, Control, LocateOptions, LocationEvent} from 'leaflet';
+import {Map, control, Control, LocationEvent} from 'leaflet';
 import '../../../../node_modules/leaflet.locatecontrol/dist/L.Control.Locate.min.js';
 
 @Component({
@@ -9,9 +9,9 @@ import '../../../../node_modules/leaflet.locatecontrol/dist/L.Control.Locate.min
   styleUrls: []
 })
 export class NgxLeafletLocateComponent implements OnInit, OnDestroy {
-  private _map: Map;
+  private _map?: Map;
   @Output() location$: EventEmitter<LocationEvent> = new EventEmitter;
-  public control: Control.Locate;
+  public control: Control.Locate = new Control.Locate();
 
   constructor() { 
   };
@@ -20,14 +20,14 @@ export class NgxLeafletLocateComponent implements OnInit, OnDestroy {
   };
 
   ngOnDestroy() {
-    this.control.stop()
-    this._map.removeControl(this.control);
-    this._map.off('locationfound')
+    this.control?.stop()
+    this._map?.removeControl(this.control);
+    this._map?.off('locationfound')
   };
 
-  @Input() options: LocateOptions= {};
+  @Input() options: Control.LocateOptions= {};
 
-  @Input() set map(map: Map){
+  @Input() set map(map: Map | undefined){
     if (map) {
       this._map = map;
       this.control =  control.locate(this.options);
@@ -38,7 +38,7 @@ export class NgxLeafletLocateComponent implements OnInit, OnDestroy {
       });
     }
   }
-  get map(): Map {
+  get map(): Map | undefined {
     return this._map
   }
 
