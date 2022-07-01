@@ -1,6 +1,6 @@
 {
   "name": "@runette/ngx-leaflet-locate",
-  "version": "2.0.3",
+  "version": "2.0.4",
   "description": "Angular Wrapper for the Leaflet Location Control",
   "keywords": [
     "angular",
@@ -18,7 +18,7 @@
     "@angular/core": ">=12.0.0"
   },
   "dependencies": {
-    "@types/leaflet.locatecontrol": "^0.60.8",
+    "@types/leaflet.locatecontrol": "^0.74.0",
     "leaflet.locatecontrol": "^0.76.1"
   },
   "scripts": {
