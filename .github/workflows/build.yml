@@ -20,7 +20,6 @@ jobs:
           node-version: ${{ matrix.node-version }}
       - name: npm install and npm run build
         run: |
-          npm list
           npm i --save-dev @angular/cli@"^12.0.0"
           npm i --save-dev ng-packagr
           npm i --save-dev @angular-devkit/build-angular@"^12.0.0"
