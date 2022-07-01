@@ -20,7 +20,7 @@ export class NgxLeafletLocateComponent implements OnInit, OnDestroy {
   };
 
   ngOnDestroy() {
-    if (this.control && this.control._map) this.control.stop()
+    if (this.control && this.map) this.control.stop()
     if (this._map && this.control) this._map.removeControl(this.control);
     this._map?.off('locationfound')
   };
