@@ -3,6 +3,10 @@ import { Component, OnInit, OnDestroy, Input, Output, EventEmitter} from '@angul
 import {Map, control, Control, LocationEvent} from 'leaflet';
 import '../../../../node_modules/leaflet.locatecontrol/dist/L.Control.Locate.min.js';
 
+interface customMap extends Map {
+  _unload: any;
+}
+
 @Component({
   selector: 'leaflet-locate-control',
   template: '',
@@ -22,7 +26,7 @@ export class NgxLeafletLocateComponent implements OnInit, OnDestroy {
   ngOnDestroy() {
     if (this.control && this.map) {
       this.control.stop();
-      this._map.off("unload", this.control._unload, this.control);
+      this._map?.off("unload", (this.map as customMap)?._unload, this.control);
     }
     if (this._map && this.control) this._map.removeControl(this.control);
     this._map?.off('locationfound')
