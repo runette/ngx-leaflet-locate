@@ -45,8 +45,8 @@ export class NgxLeafletLocateComponent implements OnInit, OnDestroy {
       });
     }
   }
+  
   get map(): Map | undefined {
     return this._map
   }
-
 }
