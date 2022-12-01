@@ -35,5 +35,5 @@ jobs:
         with:
           artifacts: "dist/release.tgz"
           token: ${{ secrets.GITHUB_TOKEN }}
-          tag: "2.0.5"
+          tag: "2.0.6"
 
