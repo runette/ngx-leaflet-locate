@@ -114,11 +114,21 @@ When there is a location update from the device, that update is emitted as an ev
 
 Unfortunately - I think because the leaflet map is run outside of Angular by ngx-leaflet - the normal css encapsulation does not work and you have to load the css globally.
 
-Add the following to the styles.css 
-
-```CSS
-@import "leaflet.locatecontrol/dist/L.Control.Locate.css";
+In your `angular.json`, under the `styles` key (eg at `architect.test.options.styles` or `architect.build.options.styles`), add the following path to the list of styles CSS files :
+```JSON
+"./node_modules/@runette/ngx-leaflet-locate/node_modules/leaflet.locatecontrol/dist/L.Control.Locate.css"
 ```
+
+Your `styles` entry will look something like this :
+```JSON
+"styles": [
+    "src/theme/variables.scss",
+    "src/global.scss",
+    "./node_modules/leaflet/dist/leaflet.css",
+    "./node_modules/@runette/ngx-leaflet-locate/node_modules/leaflet.locatecontrol/dist/L.Control.Locate.css"
+],
+```
+
 
 # Build Config
 
