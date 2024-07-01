@@ -103,7 +103,7 @@ export class OsmMapComponent implements OnInit, OnDestroy {
 >BREAKING CHANGES - from V2.0.0 the module emits native [`LocationEvent`](https://leafletjs.com/reference-1.6.0.html#locationevent) events.
 >The previous `Location` type no longer exists. `LocationEvent` type is defined on the leaflet module.
 >
-> This is to provide consistency and avoid data loss. The most major change is that the old `coords` property is no `latlng`
+> This is to provide consistency and avoid data loss. The most major change is that the old `coords` property is now `latlng`
 >
 
 The module listens for location found events when the control is following the device location.
